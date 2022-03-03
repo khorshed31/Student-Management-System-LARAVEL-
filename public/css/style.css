@@ -18,6 +18,13 @@
      background-color: #545b62;
  }
 
+.notice-section{
+    background-image: url("../img/notice.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
  @media screen and (max-width: 600px){
      .menu-pos{
          position: relative;
