@@ -70,7 +70,7 @@
                 <hr class="bg-white mt-5"/>
                 <div class="row">
                     <div class="col-12">
-                        <p class="text-white text-center mb-0">Copyright@2022, All right reserved by BASIS SEIP PWLFB-3</p>
+                        <p class="text-white text-center mb-0">Copyright@2022, All right reserved by Khorshed Alom</p>
                     </div>
                 </div>
             </div>
