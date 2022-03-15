@@ -33,4 +33,8 @@ Route::middleware(['auth:sanctum', 'verified', 'superAdmin'])->get('/delete-user
 Route::middleware(['auth:sanctum', 'verified', 'superAdmin'])->post('/new-user',[UserController::class, 'create'])->name('new-user');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/add-teacher',[TeacherController::class, 'index'])->name('add-teacher');
+Route::middleware(['auth:sanctum', 'verified'])->post('/new-teacher',[TeacherController::class, 'create'])->name('new-teacher');
 Route::middleware(['auth:sanctum', 'verified'])->get('/manage-teacher',[TeacherController::class, 'manage'])->name('manage-teacher');
+Route::middleware(['auth:sanctum', 'verified'])->get('/edit-teacher/{id}',[TeacherController::class, 'edit'])->name('edit-teacher');
+Route::middleware(['auth:sanctum', 'verified'])->get('/delete-teacher/{id}',[TeacherController::class, 'delete'])->name('delete-teacher');
+Route::middleware(['auth:sanctum', 'verified'])->post('/update-teacher/{id}',[TeacherController::class, 'update'])->name('update-teacher');
