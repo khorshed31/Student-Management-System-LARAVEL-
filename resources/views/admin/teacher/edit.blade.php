@@ -40,6 +40,13 @@
                                 <img src="{{asset($teacher->image)}}" alt="" width="100" height="100" class="m-2">
                             </div>
                         </div>
+                        <div class="form-group row mb-4">
+                            <label class="col-sm-3 col-form-label">Status</label>
+                            <div class="col-sm-9">
+                                <label><input type="radio" {{ $teacher->status == 1 ? 'checked' : '' }} name="status" value="1"/> Active</label>
+                                <label><input type="radio" {{ $teacher->status == 0 ? 'checked' : '' }} name="status" value="0"/> Inactive</label>
+                            </div>
+                        </div>
 
                         <div class="form-group row justify-content-end">
                             <div class="col-sm-9">

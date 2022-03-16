@@ -34,9 +34,9 @@
                                     <td>{{ $teacher->mobile }}</td>
                                     <td>{{ $teacher->address }}</td>
                                     @if($teacher->status == 1)
-                                        <td class="badge rounded-pill bg-success text-white">Active</td>
+                                        <td class="badge rounded-pill bg-success text-white m-2">Active</td>
                                     @else
-                                        <td class="badge rounded-pill bg-danger text-white">Inactive</td>
+                                        <td class="badge rounded-pill bg-danger text-white m-2">Inactive</td>
                                     @endif
                                     <td>
                                         <a href="{{ route('edit-teacher', ['id'=> $teacher->id]) }}" class="btn btn-success btn-sm">

@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\TeacherDashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,11 +21,12 @@ use App\Http\Controllers\TeacherController;
 Route::get('/', [WebController::class, 'index'])->name('home');
 Route::get('/course-detail', [WebController::class, 'detail'])->name('course-detail');
 Route::get('/user-login', [AuthController::class, 'login'])->name('user-login');
+Route::post('/new-login', [AuthController::class, 'newLogin'])->name('new-login');
 Route::get('/user-resister', [AuthController::class, 'register'])->name('user-resister');
 
+Route::get('/teacher-dashboard', [TeacherDashboardController::class, 'index'])->name('teacher-dashboard');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
-
 Route::middleware(['auth:sanctum', 'verified', 'superAdmin'])->get('/add-user',[UserController::class, 'index'])->name('add-user');
 Route::middleware(['auth:sanctum', 'verified', 'superAdmin'])->get('/manage-user',[UserController::class, 'manage'])->name('manage-user');
 Route::middleware(['auth:sanctum', 'verified', 'superAdmin'])->get('/edit-user/{id}',[UserController::class, 'edit'])->name('edit-user');

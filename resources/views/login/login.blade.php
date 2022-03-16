@@ -14,8 +14,8 @@
                             <h4> Login Form</h4>
                         </div>
                         <div class="card-body">
-                            <h5 class="text-warning text-center"></h5>
-                            <form action="" method="POST">
+                            <p class="text-center text-danger">{{ Session::get('message') }}</p>
+                            <form action="{{ route('new-login') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <label class="col-form-label col-md-3">Email Address</label>
@@ -27,6 +27,13 @@
                                     <label class="col-form-label col-md-3">Password</label>
                                     <div class="col-md-9">
                                         <input type="password" class="form-control" name="password"/>
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <label class="col-form-label col-md-3">Login As</label>
+                                    <div class="col-md-9">
+                                        <label><input type="radio" name="check" value="1" required/> Teacher</label>
+                                        <label><input type="radio" name="check" value="0" required/> Student</label>
                                     </div>
                                 </div>
                                 <div class="row">
