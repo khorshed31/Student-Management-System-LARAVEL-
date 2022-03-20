@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\TeacherDashboardController;
+use App\Http\Controllers\SubjectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +23,14 @@ Route::get('/', [WebController::class, 'index'])->name('home');
 Route::get('/course-detail', [WebController::class, 'detail'])->name('course-detail');
 Route::get('/user-login', [AuthController::class, 'login'])->name('user-login');
 Route::post('/new-login', [AuthController::class, 'newLogin'])->name('new-login');
+Route::post('/user-logout', [AuthController::class, 'logout'])->name('user-logout');
 Route::get('/user-resister', [AuthController::class, 'register'])->name('user-resister');
 
 Route::get('/teacher-dashboard', [TeacherDashboardController::class, 'index'])->name('teacher-dashboard');
+
+Route::get('/add-subject', [SubjectController::class, 'index'])->name('add-subject');
+Route::get('/manage-subject', [SubjectController::class, 'manage'])->name('manage-subject');
+Route::post('/new-subject', [SubjectController::class, 'create'])->name('new-subject');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
 Route::middleware(['auth:sanctum', 'verified', 'superAdmin'])->get('/add-user',[UserController::class, 'index'])->name('add-user');
