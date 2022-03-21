@@ -27,4 +27,15 @@ class SubjectController extends Controller
         Subject::newSubject($request);
         return redirect()->back()->with('message','Subject Add Successfully');
     }
+    public function edit($id){
+
+        $this->subject = Subject::find($id);
+        return view('teacher.subject.edit', ['subject' => $this->subject]);
+    }
+
+    public function update(Request $request, $id){
+
+        Subject::updateSubject($request, $id);
+        return redirect('/manage-subject')->with('message','Subject Update Successfully');
+    }
 }

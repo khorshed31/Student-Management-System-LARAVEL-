@@ -15,6 +15,7 @@ class Subject extends Model
     private static $image;
     private static $imageName;
     private static $imageUrl;
+    private static $message;
 
     public static function getImageUrl($request){
 
@@ -42,5 +43,47 @@ class Subject extends Model
     public function teacher(){
 
         return $this->belongsTo('App\Models\Teacher');
+    }
+
+    public static function updateSubject($request, $id){
+
+        self::$subject = Subject::find($id);
+        if ($request->file('image')){
+
+            if (file_exists(self::$subject->image)){
+
+                unlink(self::$subject->image);
+            }
+            self::$imageUrl = self::getImageURL($request);
+        }
+        else{
+
+            self::$imageUrl = self::$subject->image;
+        }
+        self::$subject->teacher_id = Session::get('user_id');
+        self::$subject->title = $request->title;
+        self::$subject->code = $request->code;
+        self::$subject->fee = $request->fee;
+        self::$subject->short_description = $request->short_description;
+        self::$subject->long_description = $request->long_description;
+        self::$subject->image   = self::$imageUrl;
+        self::$subject->save();
+    }
+
+    public static function updateSubjectStatus($id){
+
+        self::$subject = Subject::find($id);
+        if (self::$subject->status == 0){
+
+            self::$subject->status = 1;
+            self::$message = 'Course Active Successfully';
+        }
+        else{
+
+            self::$subject->status = 0;
+            self::$message = 'Course Inactive Successfully';
+        }
+        self::$subject->save();
+        return self::$message;
     }
 }

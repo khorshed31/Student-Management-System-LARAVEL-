@@ -17,7 +17,9 @@
 .bg-custom{
      background-color: #545b62;
  }
-
+.bg-custom{
+    background-color: #545b62;
+}
 .notice-section{
     background-image: url("../img/notice.jpg");
     background-repeat: no-repeat;
