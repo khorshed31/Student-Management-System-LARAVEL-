@@ -23,8 +23,20 @@
                 <ul class="navbar-nav">
                     <li><a href="{{ route('home') }}" class="nav-link">Home</a></li>
                     <li><a href="" class="nav-link">All Course</a></li>
-                    <li><a href="{{ route('user-login') }}" class="nav-link">Login</a></li>
-                    <li><a href="{{ route('user-resister') }}" class="nav-link">Registration</a></li>
+                    @if(Session::get('student_id'))
+                        <li class="dropdown">
+                            <a href="{{ route('user-login') }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                {{ Session::get('student_name') }}
+                            </a>
+                            <ul>
+                                <li><a href="" class="dropdown-item">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ route('user-resister') }}" class="nav-link">Registration</a></li>
+                    @else
+                        <li><a href="{{ route('user-login') }}" class="nav-link">Login</a></li>
+                        <li><a href="{{ route('user-resister') }}" class="nav-link">Registration</a></li>
+                    @endif
                 </ul>
             </div>
         </nav>

@@ -7,6 +7,9 @@
 @section('body')
     <section class="py-5">
         <div class="container">
+            <div class="col-12">
+                <p class="text-center text-success"> {{ Session::get('message') }}</p>
+            </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="card card-body bg-info">
@@ -22,7 +25,7 @@
                         <div><img src="{{ asset($subject->teacher->image) }}" alt="" width="25%"></div>
                         <hr/>
                         <div>{!! $subject->short_description !!}</div>
-                        <a href="{{ route('enroll-now',['id' =>$subject->id]) }}" class="btn btn-info w-25 mx-auto">Enroll Now</a>
+                        <a href="{{ route('enroll-now',['id' => $subject->id]) }}" class="btn btn-info w-25 mx-auto">Enroll Now</a>
                     </div>
                 </div>
             </div>
