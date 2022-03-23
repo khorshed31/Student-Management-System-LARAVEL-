@@ -28,11 +28,14 @@
                             <a href="{{ route('user-login') }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                                 {{ Session::get('student_name') }}
                             </a>
-                            <ul>
-                                <li><a href="" class="dropdown-item">Logout</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('student-dashboard') }}" class="dropdown-item">Dashboard</a></li>
+                                <li><a href="" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('studentLogoutForm').submit();">Logout</a></li>
+                                <form action="{{ route('student-logout') }}" method="POST" id="studentLogoutForm">
+                                    @csrf
+                                </form>
                             </ul>
                         </li>
-                        <li><a href="{{ route('user-resister') }}" class="nav-link">Registration</a></li>
                     @else
                         <li><a href="{{ route('user-login') }}" class="nav-link">Login</a></li>
                         <li><a href="{{ route('user-resister') }}" class="nav-link">Registration</a></li>
