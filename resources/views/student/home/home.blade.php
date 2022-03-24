@@ -21,7 +21,7 @@
                         <div class="card-header text-light">My All Recent Course</div>
                         <div class="card-body">
                             <p class="text-center text-success"> {{ Session::get('message') }}</p>
-                            <table class="table table-bordered table-hover bg-info">
+                            <table class="table table-bordered table-hover bg-info bg-opacity-25 text-white">
                                 <thead>
                                 <tr>
                                     <th>#</th>
@@ -33,7 +33,7 @@
                                 </thead>
                                 <tbody>
                                 @foreach($enrolls as $enroll)
-                                <tr>
+                                <tr class=" {{ $enroll->enroll_status == 'Pending' ? 'bg-danger bg-opacity-50' : 'bg-success bg-opacity-25' }}">
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $enroll->subject->title }}</td>
                                     <td>{{ \App\Models\Teacher::find($enroll->subject->teacher_id)->name }}</td>
