@@ -30,6 +30,15 @@ class AuthController extends Controller
         return view('login.register');
     }
 
+    public function newRegister(Request $request){
+
+        $this->user = Student::newStudent($request);
+
+        Session::put('student_id', $this->user->id);
+        Session::put('student_name', $this->user->name);
+        return redirect('/student-dashboard')->with('message', 'Registration Successfully');
+    }
+
     public function newLogin(Request $request){
 
         if ($request->check == 1){

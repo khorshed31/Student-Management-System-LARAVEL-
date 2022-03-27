@@ -10,8 +10,10 @@
                 <div class="col-md-3">
                     <div class="card">
                         <div class="list-group list-group-flush">
-                            <a href="" class="list-group-item bg-dark text-light">My All Course</a>
-                            <a href="" class="list-group-item bg-dark text-light">My Profile</a>
+                            <a href="" class="list-group-item bg-dark text-light"><img src="{{ asset($student->image) }}" alt=""></a>
+                            <a href="{{ route('student-dashboard') }}" class="list-group-item bg-dark text-light">My All Course</a>
+                            <a href="{{ route('student-profile') }}" class="list-group-item bg-dark text-light">My Profile</a>
+                            <a href="{{ route('change-password') }}" class="list-group-item bg-dark text-light">Change Password</a>
                             <a href="" class="list-group-item bg-dark text-light">My Payment</a>
                         </div>
                     </div>
