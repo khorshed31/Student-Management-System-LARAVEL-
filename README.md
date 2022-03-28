@@ -1,64 +1,75 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Simple Student Management System
 
-## About Laravel
+Part/panel of Application:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Website
+Admin Panel
+Student Panel
+Teacher Panel 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Feature list of each part/panel:
+Website
+	Home Page
+		Menu Section
+		Course List with Teacher info	
+		Subscriber Section
+		Notice Section
+		A Footer Section
+	Couser Detail
+		Individual course detail info 
+	Login Page
+		Login Form
+	Registration Page
+		Registration Form
+		Confirmation email
+===================================
+Admin Panel:
+	Login & logout system
+		
+	Create create and manage teacher
+	Admin manage teacher course
+	Admin manage student registration
+	Confirmation email
+===================================
+Teacher Panel
+	Login / logout system
+	Teacher create, update course
+	Teacher can see his or her published course
+	Teacher can see enrolled student
+===================================
+Student Panel
+	Login / logout system
+	Student can see total apply couse
+	Student can see total approved couse
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+Feature Of Our Simple Project
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- A Website that contain different course info dynamically.
+- Student can see detail specific course info.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Student can enrolled courses.
+- Student will atuo register & email notified when he enrolled a course.
+- Student can not enrolled same course twice.
+- student can login.
+- Student have dashboard which show all enrolled course with status.
+- Student cand update profile.
+- Student can change password.
+- Student can register.
 
-## Laravel Sponsors
+- Admin uesr can login.
+- admin user create & manage new admin user.
+- Amin user create & Manage teacher info.
+- Admin user cna see detail course that is created by teacher.
+- Admin use rcan change the course status.
+- Admin user can active or inactive student status.
+- Admin user can see the student enrolled course info.
+- Admin user can confirm/denay student enrolled status.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Teacher use can login.
+- Teacher user create & mange course.
+- Teacher can not delete ative course info.
+- Teacher user can see his/her approved course.
+- Teacher can see enrolled student info of his/her published couse.
